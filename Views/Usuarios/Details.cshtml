@@ -1,0 +1,19 @@
+@model WebMvcMysql.Models.Usuario
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+  <div class="form-group">
+    <label asp-for="Login"></label>
+    <input asp-for="Login" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Password"></label>
+    <input asp-for="Password" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Save changes</button>
+</form>

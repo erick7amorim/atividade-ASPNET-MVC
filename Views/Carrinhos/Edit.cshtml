@@ -1,0 +1,19 @@
+@model WebMvcMysql.Models.Carrinho
+@{
+  ViewBag.Title = "Editar Carrinho";
+}
+
+<h2>Editar Carrinho</h2>
+
+<form asp-action="Edit" method="post">
+  <div class="form-group">
+    <label asp-for="UsuarioId">Usuario ID:</label>
+    <select asp-for="UsuarioId" class="form-control"
+      asp-items='new SelectList(ViewBag.Usuarios, "Id", "Nome")'></select>
+    <!-- Adicione mais campos conforme necessário -->
+  </div>
+
+  <!-- Adicione mais campos conforme necessário -->
+
+  <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

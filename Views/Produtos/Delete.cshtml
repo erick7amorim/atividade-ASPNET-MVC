@@ -1,0 +1,17 @@
+@model WebMvcMysql.Models.Produto
+
+<h2>Excluir Produto</h2>
+
+<div>
+  <h4>Descrição: @Html.DisplayFor(model => model.Descricao)</h4>
+  <h4>Path da Imagem: @Html.DisplayFor(model => model.PathImagem)</h4>
+  <h4>Preço: @Html.DisplayFor(model => model.Preco)</h4>
+  <h4>Quantidade: @Html.DisplayFor(model => model.Quantidade)</h4>
+  <h4>Categoria: @Html.DisplayFor(model => model.Categoria.Nome)</h4>
+</div>
+
+<form asp-action="Delete" method="post">
+  <input type="hidden" asp-for="Id" />
+  <button type="submit" class="btn btn-danger">Excluir</button>
+  <a asp-action="Index">Cancelar</a>
+</form>

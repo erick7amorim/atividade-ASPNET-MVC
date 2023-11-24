@@ -1,0 +1,32 @@
+@model WebMvcMysql.Models.Produto
+
+<h2>Criar Produto</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label asp-for="Descricao"></label>
+    <input asp-for="Descricao" class="form-control" />
+    <span asp-validation-for="Descricao" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="PathImagem"></label>
+    <input asp-for="PathImagem" type="file" class="form-control" />
+    <span asp-validation-for="PathImagem" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Preco"></label>
+    <input asp-for="Preco" class="form-control" />
+    <span asp-validation-for="Preco" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="Quantidade"></label>
+    <input asp-for="Quantidade" class="form-control" />
+    <span asp-validation-for="Quantidade" class="text-danger"></span>
+  </div>
+  <div class="form-group">
+    <label asp-for="CategoriaId"></label>
+    <select asp-for="CategoriaId" asp-items="ViewBag.Categorias" class="form-control"></select>
+    <span asp-validation-for="CategoriaId" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

@@ -1,0 +1,33 @@
+@model IEnumerable<WebMvcMysql.Models.Carrinho>
+
+<h2>Carrinhos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Usuario ID</th>
+      <th>Outras Propriedades</th>
+      <!-- Adicione mais colunas conforme necessário -->
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var carrinho in Model)
+
+
+
+    {
+      <tr>
+        <td>@carrinho.Id</td>
+        <td>@carrinho.UsuarioId</td>
+        <!-- Adicione mais colunas conforme necessário -->
+        <td>
+          <a asp-action="Details" asp-route-id="@carrinho.Id">Detalhes</a> |
+          <a asp-action="Edit" asp-route-id="@carrinho.Id">Editar</a> |
+          <a asp-action="Delete" asp-route-id="@carrinho.Id">Excluir</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

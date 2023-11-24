@@ -1,0 +1,14 @@
+@model WebMvcMysql.Models.Categoria
+
+<h2>Excluir Categoria</h2>
+
+<div>
+  <h4>Nome: @Html.DisplayFor(model => model.Nome)</h4>
+  <h4>Descrição: @Html.DisplayFor(model => model.Descricao)</h4>
+</div>
+
+<form asp-action="Delete" method="post">
+  <input type="hidden" asp-for="Id" />
+  <button type="submit" class="btn btn-danger">Excluir</button>
+  <a asp-action="Index">Cancelar</a>
+</form>
